@@ -8,7 +8,7 @@ WORKDIR /builder
 RUN git clone https://github.com/panwenbin/gsocks5.git /builder \
   && cd bin && go build server.go
 
-FROM golang:1.14
+FROM alpine:latest
 
 COPY --from=builder /builder/bin/server /app/gsocks5
 
