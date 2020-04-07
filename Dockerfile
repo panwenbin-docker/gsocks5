@@ -6,7 +6,7 @@ ENV GORPOXY ${GOPROXY}
 WORKDIR /builder
 
 RUN git clone https://github.com/panwenbin/gsocks5.git /builder \
-  && cd bin && go build main.go
+  && cd bin && go build server.go
 
 FROM golang:1.14
 
