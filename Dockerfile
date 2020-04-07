@@ -15,3 +15,5 @@ COPY --from=builder /builder/bin/server /app/gsocks5
 WORKDIR /app
 
 CMD ["./gsocks5"]
+
+EXPOSE 1080
